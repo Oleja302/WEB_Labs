@@ -1,0 +1,301 @@
+/*Global styles*/
+
+* {
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+footer,
+main,
+header {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/*Style for header*/
+
+header {
+    padding: 10px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    background-color: midnightblue;
+    border-bottom: 2px solid blue;
+}
+
+.menu {
+    width: 1000px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    width: 65px;
+    height: 80px;
+    margin-left: 35px;
+}
+
+header .logo > img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+header .main-menu {
+    width: 800px;
+}
+
+header .main-menu > ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header .main-menu > ul a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-family: sans-serif;
+    font-size: 13px;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+}
+
+header .main-menu > ul > li {
+    background-color: dodgerblue;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    min-width: 130px;
+    width: 155px;
+}
+
+.main-menu > ul > li:hover {
+    border-radius: 50px;
+    background-color: royalblue;
+    transition: 0.5s;
+}
+
+.main-menu > ul > li:not(:hover) {
+    transition: 0.3s;
+}
+
+.main-menu > ul > li:active {
+    background-color: mediumblue;
+}
+
+/*Style for main*/
+
+main {
+    background-color: skyblue;
+    flex-grow: 1;
+}
+
+.content,
+.feedback {
+    height: 100%;
+    background-color: white;
+    width: 1000px;
+    min-height: 200px;
+}
+
+.content {
+    box-sizing: border-box;
+    padding-top: 120px;
+    margin-bottom: 100px;
+}
+
+main video,
+audio {
+    display: block;
+    margin: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+main video {
+    object-fit: fill;
+    border-radius: 25px;
+}
+
+.content :any-link {
+    text-decoration: none;
+}
+
+.content :link {
+    color: dodgerblue;
+}
+
+.content :visited {
+    color: lightgray;
+}
+
+.feedback table {
+    position: relative;
+    left: 33%;
+    top: 30%;
+    text-align: center;
+    border-spacing: 5px 10px;
+}
+
+.feedback td {
+    border-bottom: 1px solid #ddd;
+}
+
+.feedback tr:first-child,
+.feedback tr:nth-child(5) {
+    background-color: cornflowerblue;
+    font-family: sans-serif;
+    color: white;
+}
+
+.feedback th:nth-last-of-type(1) {
+    padding: 5px;
+}
+
+.feedback img {
+    height: 25px;
+    width: 25px;
+}
+
+.map {
+    float: left;
+}
+
+section picture {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.content p {
+    text-align: justify;
+    padding: 0px 50px 0px 50px;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+h1::before {
+    content: "🔹";
+}
+
+section h3::before {
+    content: "📖";
+}
+
+section h3 {
+    margin-top: 20px;
+    padding-left: 50px;
+}
+
+section p:first-letter {
+    margin-left: 30px;
+}
+
+section ul {
+    margin-left: 30px;
+}
+
+section table ul {
+    margin-left: 0px;
+}
+
+.content img {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #55c5e9;
+    background: #666;
+    margin: 25px 25px 0px 25px;
+}
+
+section figcaption {
+    font-family: monospace;
+    font-size: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.content details {
+    margin-left: 70px;
+}
+
+.content table {
+    width: 100%;
+    padding: 25px;
+}
+
+.content th {
+    background-color: lightgray;
+}
+
+.content tr:hover {
+    background-color: lightgray;
+}
+
+.content td {
+    border-bottom: 2px solid black;
+}
+
+.content tr > td:nth-child(1) {
+    text-align: center;
+}
+
+.content tr > td:nth-child(2) {
+    text-align: justify;
+}
+
+.content th:nth-child(1) {
+    width: 30%;
+}
+
+.content th:nth-child(2) {
+    width: 70%;
+}
+
+/*Style for footer*/
+
+footer {
+    position: sticky;
+    background-color: midnightblue;
+    height: 20px;
+}
+
+.madeby {
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+}
+
+footer p {
+    font-family: sans-serif;
+    color: white;
+}

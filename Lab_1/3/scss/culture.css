@@ -1,0 +1,189 @@
+@charset "UTF-8";
+html body footer, html body main, html body header {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+html body main .content {
+  height: 100%;
+  background-color: white;
+  width: 1000px;
+  min-height: 200px;
+}
+
+html {
+  height: 100%;
+  margin: 0;
+}
+html body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+html body header {
+  margin: 0;
+  padding: 10px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  background-color: midnightblue;
+  border-bottom: 2px solid blue;
+}
+html body header .menu {
+  margin: 0;
+  width: 1000px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+html body header .menu .logo {
+  margin: 0;
+  width: 65px;
+  height: 80px;
+  margin-left: 35px;
+}
+html body header .menu .logo img {
+  margin: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+html body header .menu .main-menu {
+  margin: 0;
+  width: 800px;
+}
+html body header .menu .main-menu ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+html body header .menu .main-menu ul li {
+  background-color: dodgerblue;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  min-width: 130px;
+  width: 155px;
+  margin: 0;
+}
+html body header .menu .main-menu ul li:hover {
+  border-radius: 50px;
+  background-color: royalblue;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+html body header .menu .main-menu ul li:not(:hover) {
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -webkit-transition: 0.3s;
+}
+html body header .menu .main-menu ul li:active {
+  background-color: mediumblue;
+}
+html body header .menu .main-menu ul li a {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-family: sans-serif;
+  font-size: 13px;
+  width: 100%;
+  display: block;
+  -moz-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+}
+html body main {
+  margin: 0;
+  background-color: skyblue;
+  flex-grow: 1;
+}
+html body main .content {
+  margin: 0;
+  -moz-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding-top: 120px;
+  margin-bottom: 100px;
+}
+html body main .content:-webkit-any-link {
+  text-decoration: none;
+}
+html body main .content:-moz-any-link {
+  text-decoration: none;
+}
+html body main .content:any-link {
+  text-decoration: none;
+}
+html body main .content:link {
+  color: dodgerblue;
+}
+html body main .content:visited {
+  color: lightgray;
+}
+html body main .content h1 {
+  font-size: 40px;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+html body main .content h1::before {
+  content: "🔹";
+}
+html body main .content section {
+  margin: 0;
+}
+html body main .content section h3 {
+  margin: 0;
+  margin-top: 20px;
+  padding-left: 50px;
+}
+html body main .content section h3::before {
+  content: "📖";
+}
+html body main .content section p {
+  margin: 0;
+  text-align: justify;
+  padding: 0px 50px 0px 50px;
+}
+html body main .content section p:first-letter {
+  margin-left: 30px;
+}
+html body footer {
+  margin: 0;
+  background-color: midnightblue;
+  height: 20px;
+  position: -webkit-sticky;
+  position: sticky;
+}
+html body footer .madeby {
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+}
+html body footer .madeby p {
+  margin: 0;
+  font-family: sans-serif;
+  color: white;
+}/*# sourceMappingURL=culture.css.map */
