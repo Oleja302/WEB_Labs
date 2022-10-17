@@ -1,0 +1,114 @@
+body {
+    font-family: 'Lato';
+}
+
+.dropdown-custom-btn button {
+    background-color: #6699FF;
+    border-radius: 0px;
+    color: white;
+}
+
+.dropdown-custom-btn .btn:first-child:hover {
+    background-color: #682c34;
+    color: white;
+}
+
+.my-cart {
+    color: black;
+    font-size: 22px;
+}
+
+.btn-custom-gray {
+    background-color: #f9f9f9 !important;
+    color: black;
+    border: 1px #e6e6e6 solid;
+}
+
+.btn-custom-gray-2 {
+    color: black;
+    border: 1px #e6e6e6 solid;
+}
+
+.input-border-custom-gray {
+    border: 1px #e6e6e6 solid;
+}
+
+.custom-nav .nav-link {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.custom-main-nav {
+    border-top: 1px #ececec solid;
+}
+
+header .logo-container img{
+    height: 80%;
+    width: auto;
+}
+
+header .chapter{
+    background-color: #f8f3f4;
+}
+
+header img{
+    object-fit: contain;
+}
+
+header .chapter span{
+    color: #6699FF;
+}
+
+.section-5 {
+    height: 440px;
+    background-image: url('img/ocean.png');
+    background-size: cover;
+    background-position: center bottom;
+}
+
+.section-5 span{
+    color: #6699FF;
+}
+
+.section-5 .input-group{
+    height: 48px;
+}
+
+.section-5 .quote {
+    position: absolute;
+    top: 90px;
+    left: 110px;
+}
+
+.section-5 .face {
+    position: absolute;
+    top: 90px;
+}
+
+.section-5 button{
+    background-color: #6699FF;
+}
+
+.section-5 p {
+    font-size: 1vw;
+}
+
+.section-5 h2 {
+    font-size: 2.3vw;
+}
+
+.section-5 h4 {
+    font-size: 1vw;
+}
+
+.section-5 input{
+    background-color: gainsboro;
+}
+
+footer span {
+    color: #6699FF;
+}
+
+footer .bottom-footer{
+    background-color: #e6e6e6;
+}

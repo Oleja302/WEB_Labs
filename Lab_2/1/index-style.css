@@ -1,0 +1,169 @@
+.section-1 {
+    width: 100%;
+    aspect-ratio: 2/1;
+    background-image: url('img/phone.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.section-1 h1, .section-1 h2{
+    font-size: 2.0vw;
+}
+
+.section-2 .category-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.section-2 .category-item{
+    aspect-ratio: 1.5/1;
+}
+
+.section-2 .category-item{
+    overflow: hidden;
+}
+
+.section-2 .scale:hover{
+    transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+    transform: scale(1.3);
+}
+
+.section-2 .scale {
+    transition: all 0.5s;
+}
+
+.section-1 .title {
+    border-left: 12px #6699FF solid;
+    padding-left: 10px;
+}
+
+.section-1 .title h1 {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.section-1 .title h2 {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.section-1 .title h2 span {
+    color: #6699FF;
+}
+
+.category-item {
+    width: 100%;
+    position: relative;
+    padding: 20px 0px;
+}
+
+.category-item img {
+    height: 450px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.category-item .title {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    background-color: white;
+    padding: 10px;
+}
+
+.category-item .title h5 {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 2.0vw;
+}
+
+.category-item .title h4 {
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 1.5vw;
+    color: #6699FF;
+}
+
+.product-item {
+    width: 100%;
+}
+
+.product-item .image {
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-item .image img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.product-item .image .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: none;
+}
+
+.product-item .image .shadow .btn-outline-white {
+    border: 1px white solid;
+    color: white;
+}
+
+.product-item .image .shadow .btn-outline-white i {
+    margin-right: 10px;
+}
+
+.product-item:hover .image .shadow {
+    display: flex;
+}
+
+.product-item p.price {
+    color: #6699FF;
+}
+
+.section-4 i {
+    transition: 0.5s;
+}
+
+.section-4 h1 {
+    font-size: 3.0vw;
+}
+
+.section-4 h4{
+    font-size: 1.5vw;
+}
+
+.section-4 i:hover{
+    transform: rotate(360deg);
+}
+
+.section-4 .container {
+    background-color: #222224;
+}
+
+.section-4 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.section-4 i,
+.section-4 span {
+    color: #6699FF;
+}
+
+.section-4 .title {
+    position: absolute;
+    top: 20%;
+    left: 3%;
+}
