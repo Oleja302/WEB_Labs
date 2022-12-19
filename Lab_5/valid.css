@@ -1,0 +1,45 @@
+
+    h1 {
+        text-align: center;
+    }
+    
+    form > input {
+        font-size: 10pt;
+        color: blueviolet;
+        padding: 10px;
+
+        width: 320px;
+        border: none;
+        border-radius: 5px;
+    }
+    
+    form > input[type="submit"] {
+        width: 100px;
+        height: 40px;
+        background: green;
+        color: white;
+    }
+    
+    form > input:focus {
+        outline: none;
+    }
+    
+    [class*="validation"] .invalid,
+    [class*="validation"] .valid {
+        display: none;
+    }
+    
+    form > input:focus:required:invalid {
+        border: 2px solid red;
+    }
+    
+    form > input[type="password"]:focus:required:valid ~ .validation02 .valid,
+    form > input[type="password"]:focus:required:invalid ~ .validation02 .invalid,
+    form > input[type="email"]:focus:required:valid ~ .validation01 .valid,
+    form > input[type="email"]:focus:required:invalid ~ .validation01 .invalid {
+        display: block;
+    }
+    
+    form > input:focus:required:valid {
+        border: 2px solid green;
+    }
