@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="tabs">
+            <div class="tab-header">
+                <div class="tab active"></div>
+                <div class="tab"></div>
+            </div>
+            <div class="tab-body">
+                <div class="tab-item">
+                    <div class="search-module">
+                        <div class="search-header">
+                            <input type="search" placeholder="Введите имя" value="">
+                            <button id="search">Найти</button>
+                            <button id="load">Догрузить</button>
+                            <button id="sort">Сортировка</button>
+                        </div>
+                        <div class="search-body">
+                            <p>Таблица результата</p>
+                            <ul>
+                                <li>search result</li>
+                                <li>search result</li>
+                                <li>search result</li>
+                                <li>search result</li>
+                                <li>search result</li>
+                            </ul>
+                            <div id="for-ajax"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-item active">
+                    <div class="modal hidden-modal" data-name="first-modal">
+
+                        <div class="modal-window">
+                            <div class="modal-header">
+                                <h3>Title</h3>
+                                <span class="close-modal">Close</span>
+                            </div>
+                            <div class="modal-body">
+
+                            </div>
+                            <div class="modal-footer">
+
+                            </div>
+                        </div>
+
+                        <div class="modal-shadow close-modal"></div>
+                    </div>
+
+                    <div class="new-module">
+                        <h1>NEWS</h1>
+                        <div class="search-news">
+                            <input type="search" placeholder="Введите название" value="">
+                            <button id="search-news">Найти</button>
+                            <button id="sort-news">Сортировка</button>
+                        </div>
+                        <div class="news">
+                        </div>
+
+                        <div class="news-nav">
+                            <button>Prew</button>
+                            <button class="current" value="1">1</button>
+                            <button value="2">2</button>
+                            <button value="3">3</button>
+                            <button>Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="tabs.js"></script>
+    <script src="news.js"></script>
+    <script>
+
+        let resArray;
+        let load = document.querySelector("#load");
+        let search = document.querySelector("#search");
+        let sortState = false;
+
+        document.querySelector("#sort").onclick = function() { sortState = !sortState };
+
+        search.onclick = function () {
+            let searchText = document.querySelector("input[type='search']").value
+            let resultBlock = document.querySelector(".search-body ul")
+
+            let formData = new FormData();
+            formData.append("type", "nickname")
+
+            fetch('/ajax.php', {
+                method: 'POST',
+                body: formData
+            })
+                .then((response) => {
+                    return response.json()
+                })
+                .then((jsonArray) => {
+                    let tmp = '';
+
+                    if(sortState) jsonArray = jsonArray.sort();
+
+                    resArray = jsonArray
+                    if (jsonArray.filter(elem => searchText.includes(elem)).length != 0)
+                        resArray = jsonArray.filter(elem => searchText.includes(elem));
+
+                    if (resArray.length > 10) load.style.display = 'block';
+                    resArray.slice(0, 10).forEach(item => {
+                        tmp += `<li onclick="this.style.display = 'none' ">${item}</li>`
+                    });
+
+                    resultBlock.innerHTML = tmp;
+                })
+        }
+
+        load.onclick = function () {
+            let tmp = '';
+            let resultBlock = document.querySelector(".search-body ul")
+
+            resArray.slice(10, resArray.length).forEach(item => {
+                tmp += `<li onclick="this.style.display = 'none' ">${item}</li>`
+            });
+
+            resultBlock.innerHTML += tmp;
+            load.style.display = 'none';
+        }
+
+    </script>
+</body>
+
+</html>
